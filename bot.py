@@ -27,8 +27,8 @@ app = Client(
     bot_token=BOT_TOKEN,
 
     # API ID aur API Hash — https://my.telegram.org se lo
-    api_id=12345678,        # 👈 Apna API ID daalo
-    api_hash="abcdef1234",  # 👈 Apna API Hash daalo
+    api_id=22815212,        # 👈 Apna API ID daalo
+    api_hash="7ff4abb86e8b8b6ac93bee9d4e55ee0d",  # 👈 Apna API Hash daalo
 )
 
 
