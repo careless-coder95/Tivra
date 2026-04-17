@@ -3,10 +3,10 @@
 # ==============================================================
 
 # 1. BotFather se mila token
-BOT_TOKEN = "1234567890:ABCxxx..."   # 👈 YAHAN APNA TOKEN DAALO
+BOT_TOKEN = ""
 
 # 2. Apna Telegram user ID (admin)
-ADMINS = [5864182070]  # 👈 Apna ID daalo
+ADMINS = [6567187829]  # 👈 Apna ID daalo
 
 # 3. Required channels — join karne zaroori hain
 REQUIRED_CHANNELS = [
