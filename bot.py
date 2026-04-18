@@ -30,7 +30,7 @@ app = Client(
 # ==============================================================
 
 from start import register_handlers
-from broadcast import register_broadcast_handlers
+from handlers.broadcast import register_broadcast_handlers
 
 register_handlers(app)
 register_broadcast_handlers(app)
