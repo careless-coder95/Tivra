@@ -3,7 +3,7 @@
 # ==============================================================
 
 # 1. BotFather se mila token
-BOT_TOKEN = "1234567890:ABCxxx..."   # 👈 YAHAN APNA TOKEN DAALO
+BOT_TOKEN = "8730327058:AAEof6npzqmGeRlj-YsiKnNNqSFrWGR3W90"   # 👈 YAHAN APNA TOKEN DAALO
 
 # 2. Apna Telegram user ID (admin)
 ADMINS = [5864182070]
