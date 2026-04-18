@@ -15,7 +15,7 @@ WHO CAN USE:
 """
 
 import asyncio
-from pyrogram import Client, filters
+from pyrogram import Client, filters, enums
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 
@@ -54,7 +54,7 @@ def register_broadcast_handlers(app: Client):
                 "<i>Example:\n"
                 "1. Koi photo ya text message bhejo\n"
                 "2. Us par reply karo: /broadcast</i>",
-                parse_mode="html"
+                parse_mode=enums.ParseMode.HTML
             )
             return
 
@@ -72,7 +72,7 @@ def register_broadcast_handlers(app: Client):
         status_msg = await msg.reply_text(
             f"📤 <b>Broadcast shuru ho raha hai...</b>\n"
             f"👥 Total users: <b>{total}</b>",
-            parse_mode="html"
+            parse_mode=enums.ParseMode.HTML
         )
 
         # 4. Broadcast loop — message type detect karke copy karo
@@ -105,7 +105,7 @@ def register_broadcast_handlers(app: Client):
                         f"❌ Failed: <b>{failed}</b>\n"
                         f"🚫 Blocked: <b>{blocked}</b>\n"
                         f"👥 Total: <b>{total}</b>",
-                        parse_mode="html"
+                        parse_mode=enums.ParseMode.HTML
                     )
                 except Exception:
                     pass
@@ -119,7 +119,7 @@ def register_broadcast_handlers(app: Client):
             f"❌ Failed: <b>{failed}</b>\n"
             f"🚫 Blocked/Deleted: <b>{blocked}</b>\n"
             f"👥 Total users: <b>{total}</b>",
-            parse_mode="html"
+            parse_mode=enums.ParseMode.HTML
         )
 
 
@@ -137,7 +137,7 @@ async def _forward_exact(client: Client, user_id: int, msg: Message):
 
     # Common kwargs
     caption    = msg.caption or None
-    parse_mode = "html"
+    
 
     # ── Photo ────────────────────────────────────
     if msg.photo:
@@ -145,7 +145,7 @@ async def _forward_exact(client: Client, user_id: int, msg: Message):
             chat_id=user_id,
             photo=msg.photo.file_id,
             caption=caption,
-            parse_mode=parse_mode,
+            parse_mode=enums.ParseMode.HTML
         )
 
     # ── Video ────────────────────────────────────
@@ -154,7 +154,7 @@ async def _forward_exact(client: Client, user_id: int, msg: Message):
             chat_id=user_id,
             video=msg.video.file_id,
             caption=caption,
-            parse_mode=parse_mode,
+            parse_mode=enums.ParseMode.HTML
         )
 
     # ── Animation / GIF ──────────────────────────
@@ -163,7 +163,7 @@ async def _forward_exact(client: Client, user_id: int, msg: Message):
             chat_id=user_id,
             animation=msg.animation.file_id,
             caption=caption,
-            parse_mode=parse_mode,
+            parse_mode=enums.ParseMode.HTML
         )
 
     # ── Document ─────────────────────────────────
@@ -172,7 +172,7 @@ async def _forward_exact(client: Client, user_id: int, msg: Message):
             chat_id=user_id,
             document=msg.document.file_id,
             caption=caption,
-            parse_mode=parse_mode,
+            parse_mode=enums.ParseMode.HTML
         )
 
     # ── Audio ────────────────────────────────────
@@ -181,7 +181,7 @@ async def _forward_exact(client: Client, user_id: int, msg: Message):
             chat_id=user_id,
             audio=msg.audio.file_id,
             caption=caption,
-            parse_mode=parse_mode,
+            parse_mode=enums.ParseMode.HTML
         )
 
     # ── Voice ────────────────────────────────────
@@ -190,7 +190,7 @@ async def _forward_exact(client: Client, user_id: int, msg: Message):
             chat_id=user_id,
             voice=msg.voice.file_id,
             caption=caption,
-            parse_mode=parse_mode,
+            parse_mode=enums.ParseMode.HTML
         )
 
     # ── Sticker ──────────────────────────────────
@@ -205,6 +205,6 @@ async def _forward_exact(client: Client, user_id: int, msg: Message):
         await client.send_message(
             chat_id=user_id,
             text=msg.text,
-            parse_mode=parse_mode,
+            parse_mode=enums.ParseMode.HTML
             disable_web_page_preview=True,
         )
