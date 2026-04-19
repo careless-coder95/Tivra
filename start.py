@@ -38,9 +38,11 @@ REFER_IMAGE = "https://files.catbox.moe/yp0cak.jpg"  # 👈 Refer wali image ka 
 # 🔴 IMPORTANT VALUES 
 # ==============================================================
 
-title="𝗔𝗡𝗬𝗔 𝗕𝗢𝗧𝗦"
-rafer="https://t.me/Dkgkmemfcbot"
-username=""
+title="𝗔𝗡𝗬𝗔 𝗕𝗢𝗧𝗦"     # bot name
+rafer="https://t.me/Dkgkmemfcbot"       #rafer link [ bot link ]
+username=""        #admin username without @
+support=""         #support group username without @
+bot_username=""  #bot username without @
 
 
 
@@ -277,8 +279,8 @@ def register_handlers(app: Client):
 
         inline_buttons = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("👤 Admin", url=""),
-                InlineKeyboardButton("☎️ Group", url=""),
+                InlineKeyboardButton("👤 Admin", url=f"https://t.me/{username}"),
+                InlineKeyboardButton("☎️ Group", url=f"https://t.me/{support}"),
             ],
         ])
 
@@ -351,7 +353,7 @@ def register_handlers(app: Client):
 
         # ✏️ INLINE BUTTON — Yahan apna button set karo
         inline_buttons = InlineKeyboardMarkup([
-            [InlineKeyboardButton("🔗 LINK", url="https://t.me/Dkgkmemfcbot")],
+            [InlineKeyboardButton("🔗 𝗥𝗔𝗙𝗘𝗥 𝗟𝗜𝗡𝗞", url=f"https://t.me/{bot_username}")],
         ])
 
         await msg.reply_photo(
@@ -375,7 +377,7 @@ def register_handlers(app: Client):
 
         # ✏️ INLINE BUTTON
         inline_buttons = InlineKeyboardMarkup([
-            [InlineKeyboardButton("💸 Claim Now", callback_data="do_claim_500")],
+            [InlineKeyboardButton("💸 𝗖𝗟𝗔𝗜𝗠 𝗡𝗢𝗪", callback_data="do_claim_500")],
         ])
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML, reply_markup=inline_buttons)
