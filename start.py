@@ -131,11 +131,8 @@ def get_task_inline():
 async def send_main_menu(client: Client, chat_id: int, user_name: str):
 
     # ✏️ MAIN MENU TEXT
-    text = f"""<b>🏠 Main Menu</b>
-
-👋 <b>Hello, {user_name}!</b>
-
-Niche se apni service chunein."""
+    text = f"""✅ 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗬𝗢𝗨𝗥 𝗧𝗔𝗦𝗞 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗡𝗘𝗬 😄
+    """
 
     await client.send_photo(
         chat_id=chat_id,
@@ -167,15 +164,25 @@ def register_handlers(app: Client):
         joined, missing = await check_fsub(client, user_id)
 
         # ✏️ WELCOME TEXT — Force join se pehle
-        welcome_before = f"""<b>👋 𝗛𝗲𝗹𝗹𝗼𝘄, <a href='tg://user?id={user_id}'>{user_name}</a>!</b>
+        welcome_before = f"""<blockquote expandable><b>👋 𝗛𝗲𝗹𝗹𝗼𝘄, <a href='tg://user?id={user_id}'>{user_name}</a>!</b></blockquote>
+        <blockquote>
         💐 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 {title}!
         🤑 𝗝𝗼𝗶𝗻 𝟱 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗔𝗻𝗱 𝗚𝗲𝘁 ₹𝟯𝟴𝟬
         📌 𝗠𝘂𝘀𝘁 𝗝𝗼𝗶𝗻 𝗔𝗹𝗹 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗧𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 𝗕𝗼𝘁
-        ✔️ 𝗔𝗳𝘁𝗲𝗿 𝗝𝗼𝗶𝗻𝗶𝗻𝗴, 𝗖𝗹𝗶𝗰𝗸 𝗩𝗘𝗥𝗜𝗙𝗬 🔒"""
+        </blockquote> <blockquote>
+        ✔️ 𝗔𝗳𝘁𝗲𝗿 𝗝𝗼𝗶𝗻𝗶𝗻𝗴, 𝗖𝗹𝗶𝗰𝗸 𝗩𝗘𝗥𝗜𝗙𝗬 🔒
+        </blockquote>"""
 
         # ✏️ WELCOME TEXT — Verify ke baad
-        welcome_after = f"""<b>✅ 𝗛𝗲𝗹𝗹𝗼𝘄, <a href='tg://user?id={user_id}'>{user_name}</a>!</b>
-        
+        welcome_after = f"""<blockquote expandable><b>👋🏻 𝗛𝗘𝗟𝗟𝗢, <a href='tg://user?id={user_id}'>{user_name}</a>!</b></blockquote>
+        <blockquote>
+        📝 𝗝𝗨𝗦𝗧 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗔𝗡𝗬 𝗧𝗔𝗦𝗞𝗦 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗡𝗘𝗬 💰
+        📲 𝗥𝗔𝗙𝗘𝗥 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗥𝗘 𝗠𝗢𝗡𝗘𝗬. 
+        📤 𝗗𝗜𝗥𝗘𝗖𝗧𝗟𝗬 𝗪𝗜𝗧𝗛𝗗𝗥𝗔𝗪𝗔𝗟 𝗜𝗡 𝗬𝗢𝗨 𝗨𝗣𝗜 / 𝗕𝗔𝗡𝗞 𝗔𝗖𝗖𝗢𝗨𝗡𝗧.
+        </blockquote>
+        <blockquote expandable>
+        ✅ 𝗖𝗛𝗘𝗔𝗞𝗢𝗨𝗧 𝗔𝗟𝗟 𝗠𝗘𝗡𝗨 𝗕𝗨𝗧𝗧𝗢𝗡𝗦 𝗧𝗢 𝗜𝗡𝗧𝗥𝗔𝗖𝗧.
+        </blockquote>
         """
 
         if not joined:
@@ -245,11 +252,15 @@ def register_handlers(app: Client):
     async def balance_handler(client: Client, msg: Message):
 
         # ✏️ YAHAN APNA TEXT LIKHO
-        text = f"""<b>💰 YOUR BALANCE</b>
-━━━━━━━━━━━━━━━━━━━━
-
-➻ Yahan balance info likho.
-➻ <b>Current balance, pending, total earned</b> etc."""
+        text = f"""<blockquote expandable>💰 <u>𝐘𝐎𝐔𝐑 𝐁𝐀𝐋𝐀𝐍𝐂𝐄</u></blockquote>
+        ◈ ━━━━━━ ⸙ ━━━━━━ ◈
+        🎉 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗕𝗼𝗻𝘂𝘀 : ₹𝟱𝟬
+        💸 𝗬𝗼𝘂𝗿 𝗘𝗮𝗿𝗻𝗶𝗻𝗴 : ₹𝟬
+        💰 𝗧𝗼𝘁𝗮𝗹 𝗕𝗮𝗹𝗮𝗻𝗰𝗲 : ₹𝟱𝟬
+        <blockquote>
+        ✅ 𝗦𝘁𝗮𝗿𝘁 𝗘𝗮𝗿𝗻𝗶𝗻𝗴 𝗕𝘆 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗶𝗻𝗴 𝗧𝗮𝘀𝗸𝘀.
+        </blockquote>
+        """
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML)
 
@@ -260,11 +271,11 @@ def register_handlers(app: Client):
     async def support_handler(client: Client, msg: Message):
 
         # ✏️ YAHAN APNA TEXT LIKHO
-        text = f"""<b>☎️ SUPPORT</b>
-━━━━━━━━━━━━━━━━━━━━
-
-➻ Yahan support info likho.
-➻ <b>Working hours, contact method</b> etc."""
+        text = f"""<blockquote expandable>☎️ <u>𝐒𝐔𝐏𝐏𝐎𝐑𝐓</u></blockquote>
+        ◈ ━━━━━━ ⸙ ━━━━━━ ◈
+        
+        
+        """
 
         inline_buttons = InlineKeyboardMarkup([
             [InlineKeyboardButton("👤 Contact Admin", url="https://t.me/youradmin")],
@@ -380,12 +391,14 @@ def register_handlers(app: Client):
     async def withdrawal_handler(client: Client, msg: Message):
 
         # ✏️ YAHAN APNA TEXT LIKHO
-        text = f"""<b>📤 WITHDRAWAL</b>
-━━━━━━━━━━━━━━━━━━━━
-
-➻ Yahan withdrawal info likho.
-➻ <b>Min amount, method, processing time</b> etc."""
-
+        text = f"""📤<u> 𝐖𝐈𝐓𝐇𝐃𝐑𝐀𝐖𝐀𝐋𝐒</u>
+        ◈ ━━━━━━ ⸙ ━━━━━━ ◈
+        💰 𝗠𝗶𝗻𝗶𝗺𝘂𝗺 𝗪𝗶𝘁𝗵𝗱𝗿𝗮𝘄𝗮𝗹: ₹𝟳𝟬
+        💳 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗕𝗮𝗹𝗮𝗻𝗰𝗲: ₹𝟱𝟬
+        
+        ✅ 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝘁𝗮𝘀𝗸𝘀 𝘁𝗼 𝗲𝗮𝗿𝗻 𝗮𝗻𝗱 𝘂𝗻𝗹𝗼𝗰𝗸 𝘄𝗶𝘁𝗵𝗱𝗿𝗮𝘄𝗮𝗹.
+        """
+        
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML)
 
     # ════════════════════════════════════════════════════════
@@ -395,11 +408,11 @@ def register_handlers(app: Client):
     async def statistics_handler(client: Client, msg: Message):
 
         # ✏️ YAHAN APNA TEXT LIKHO
-        text = f"""<b>📊 STATISTICS</b>
-━━━━━━━━━━━━━━━━━━━━
-
-➻ Yahan statistics info likho.
-➻ <b>Total users, total paid, active users</b> etc."""
+        text = f"""📊 <u>𝐒𝐓𝐀𝐓𝐈𝐒𝐓𝐈𝐂𝐒</u>
+        👤 𝗧𝗼𝘁𝗮𝗹 𝗧𝗮𝘀𝗸𝘀: 𝟯 + <b>Rafer</b>
+        ✅ 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱 𝗧𝗮𝘀𝗸𝘀: 𝟬
+        💰 𝗧𝗼𝘁𝗮𝗹 𝗘𝗮𝗿𝗻𝗶𝗻𝗴𝘀: 𝟬
+        """
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML)
 
