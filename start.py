@@ -231,7 +231,7 @@ def register_handlers(app: Client):
             await send_main_menu(client, msg.chat.id, user_name)
         else:
             await msg.reply_text(
-                f"❌ 𝗛𝗮𝘃𝗲𝗻'𝘁 𝗷𝗼𝗶𝗻𝗲𝗱 𝗲𝘃𝗲𝗻 {len(missing)} 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝘆𝗲𝘁!\n ✅ 𝗝𝗼𝗶𝗻 𝗮𝗻𝗱 𝘁𝗵𝗲𝗻 𝗰𝗹𝗶𝗰𝗸 𝗩𝗲𝗿𝗶𝗳𝘆 𝗮𝗴𝗮𝗶𝗻.",
+                f"❌ 𝗛𝗮𝘃𝗲𝗻'𝘁 𝗷𝗼𝗶𝗻𝗲𝗱 𝗲𝘃𝗲𝗻 {len(missing)} 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝘆𝗲𝘁!\n\n ✅ 𝗝𝗼𝗶𝗻 𝗮𝗻𝗱 𝘁𝗵𝗲𝗻 𝗰𝗹𝗶𝗰𝗸 𝗩𝗲𝗿𝗶𝗳𝘆 𝗮𝗴𝗮𝗶𝗻.",
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=get_fsub_inline(missing),
             )
