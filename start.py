@@ -387,7 +387,7 @@ def register_handlers(app: Client):
 
         # ✏️ INLINE BUTTON
         inline_buttons = InlineKeyboardMarkup([
-            [InlineKeyboardButton("💸 𝗖𝗟𝗔𝗜𝗠 𝗡𝗢𝗪", url=f"https://t.me/{rafer_app}")],
+            [InlineKeyboardButton("💸 𝗖𝗟𝗔𝗜𝗠 𝗡𝗢𝗪", url=rafer_app)],
         ])
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML, reply_markup=inline_buttons)
