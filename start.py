@@ -34,8 +34,14 @@ TASK_IMAGE = "https://files.catbox.moe/3rdf9a.jpg"  # 👈 Task wali image ka fi
 # Refer & Earn image
 REFER_IMAGE = "https://files.catbox.moe/yp0cak.jpg"  # 👈 Refer wali image ka file_id yahan daalo
 
+# ==============================================================
+# 🔴 IMPORTANT VALUES 
+# ==============================================================
+
 title="𝗔𝗡𝗬𝗔 𝗕𝗢𝗧𝗦"
 rafer="https://t.me/Dkgkmemfcbot"
+username=""
+
 
 
 # ==============================================================
@@ -136,10 +142,9 @@ async def send_main_menu(client: Client, chat_id: int, user_name: str):
     text = f"""✅ 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗬𝗢𝗨𝗥 𝗧𝗔𝗦𝗞 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗡𝗘𝗬 😄
     """
 
-    await client.send_photo(
+    await client.send_message(
         chat_id=chat_id,
-        photo=WELCOME_IMAGE_AFTER,
-        caption=text,
+        text=text,
         parse_mode=enums.ParseMode.HTML,
         reply_markup=get_main_keyboard(),
     )
@@ -167,17 +172,16 @@ def register_handlers(app: Client):
 
         # ✏️ WELCOME TEXT — Force join se pehle
         welcome_before = f"""<blockquote expandable><b>👋 𝗛𝗘𝗟𝗟𝗢𝗪, <a href='tg://user?id={user_id}'>{user_name}</a>!</b></blockquote>
-💐 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 {title}!
-🤑 𝗝𝗼𝗶𝗻 𝟱 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗔𝗻𝗱 𝗚𝗲𝘁 ₹𝟯𝟴𝟬
-📌 𝗠𝘂𝘀𝘁 𝗝𝗼𝗶𝗻 𝗔𝗹𝗹 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗧𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 𝗕𝗼𝘁
-✔️ 𝗔𝗳𝘁𝗲𝗿 𝗝𝗼𝗶𝗻𝗶𝗻𝗴, 𝗖𝗹𝗶𝗰𝗸 𝗩𝗘𝗥𝗜𝗙𝗬 🔒"""
+💐 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 {title}
+📲 𝗝𝗢𝗜𝗡 𝟱 𝗥𝗘𝗤𝗨𝗜𝗥𝗘𝗗 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗔𝗡𝗗 𝗚𝗘𝗧 ₹𝟰𝟬𝟬
+🔓 𝗠𝗨𝗦𝗧 𝗝𝗢𝗜𝗡 𝗔𝗟𝗟 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗧𝗢 𝗨𝗡𝗟𝗢𝗖𝗞 𝗕𝗢𝗧. 
+✅ 𝗔𝗙𝗧𝗘𝗥 𝗝𝗢𝗜𝗡𝗜𝗡𝗚 𝗖𝗟𝗜𝗖𝗞 𝗩𝗘𝗥𝗜𝗙𝗬 ✅"""
 
         # ✏️ WELCOME TEXT — Verify ke baad
-        welcome_after = f"""<blockquote expandable><b>👋🏻 𝗛𝗘𝗟𝗟𝗢, <a href='tg://user?id={user_id}'>{user_name}</a>!</b></blockquote><blockquote>
-📝 𝗝𝗨𝗦𝗧 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗔𝗡𝗬 𝗧𝗔𝗦𝗞𝗦 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗡𝗘𝗬 💰
+        welcome_after = f"""<blockquote expandable><b>👋🏻 𝗛𝗘𝗟𝗟𝗢, <a href='tg://user?id={user_id}'>{user_name}</a>!</b>
+💰𝗝𝗨𝗦𝗧 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗔𝗡𝗬 𝗧𝗔𝗦𝗞𝗦 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗡𝗘𝗬
 📲 𝗥𝗔𝗙𝗘𝗥 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗥𝗘 𝗠𝗢𝗡𝗘𝗬. 
-📤 𝗗𝗜𝗥𝗘𝗖𝗧𝗟𝗬 𝗪𝗜𝗧𝗛𝗗𝗥𝗔𝗪𝗔𝗟 𝗜𝗡 𝗬𝗢𝗨 𝗨𝗣𝗜 / 𝗕𝗔𝗡𝗞 𝗔𝗖𝗖𝗢𝗨𝗡𝗧.
-</blockquote> <blockquote expandable>
+📤 𝗗𝗜𝗥𝗘𝗖𝗧𝗟𝗬 𝗪𝗜𝗧𝗛𝗗𝗥𝗔𝗪𝗔𝗟 𝗜𝗡 𝗬𝗢𝗨 𝗨𝗣𝗜 / 𝗕𝗔𝗡𝗞 𝗔𝗖𝗖𝗢𝗨𝗡𝗧. <blockquote expandable>
 ✅ 𝗖𝗛𝗘𝗔𝗞𝗢𝗨𝗧 𝗔𝗟𝗟 𝗠𝗘𝗡𝗨 𝗕𝗨𝗧𝗧𝗢𝗡𝗦 𝗧𝗢 𝗜𝗡𝗧𝗥𝗔𝗖𝗧.</blockquote>"""
 
         if not joined:
@@ -188,8 +192,9 @@ def register_handlers(app: Client):
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=get_fsub_inline(missing),
             )
-            await client.send_message(
+            await client.send_photo(
                 chat_id=msg.chat.id,
+                photo=WELCOME_IMAGE_AFTER
                 text="🤑 𝗝𝗼𝗶𝗻 𝟱 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗔𝗻𝗱 𝗚𝗲𝘁 ₹𝟰𝟬𝟬 𝗬𝗼𝘂𝗿 𝗨𝗣𝗜",
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=get_verify_keyboard(),
@@ -263,13 +268,18 @@ def register_handlers(app: Client):
 
         # ✏️ YAHAN APNA TEXT LIKHO
         text = f"""<blockquote expandable>☎️ <u>𝐒𝐔𝐏𝐏𝐎𝐑𝐓</u></blockquote>
-        ◈ ━━━━━━ ⸙ ━━━━━━ ◈
-        
+◈ ━━━━━━ ⸙ ━━━━━━ ◈
+𝗜𝗗 : @{username}
+
+📲 𝗞𝗜𝗦𝗜 𝗕𝗛𝗜 𝗛𝗘𝗟𝗣 𝗞𝗘 𝗟𝗜𝗬𝗘 𝗠𝗘𝗦𝗦𝗘𝗚𝗘 𝗞𝗔𝗥𝗘.
         
         """
 
         inline_buttons = InlineKeyboardMarkup([
-            [InlineKeyboardButton("👤 Contact Admin", url="https://t.me/youradmin")],
+            [
+                InlineKeyboardButton("👤 Admin", url=""),
+                InlineKeyboardButton("☎️ Group", url=""),
+            ],
         ])
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML, reply_markup=inline_buttons)
@@ -360,12 +370,12 @@ def register_handlers(app: Client):
         # ✏️ YAHAN APNA TEXT LIKHO
         text = f"""
         
+        
         """
 
         # ✏️ INLINE BUTTON
         inline_buttons = InlineKeyboardMarkup([
             [InlineKeyboardButton("💸 Claim Now", callback_data="do_claim_500")],
-            [InlineKeyboardButton("📋 Conditions", url="https://t.me/yourchannel")],
         ])
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML, reply_markup=inline_buttons)
@@ -377,7 +387,7 @@ def register_handlers(app: Client):
     async def withdrawal_handler(client: Client, msg: Message):
 
         # ✏️ YAHAN APNA TEXT LIKHO
-        text = f"""📤<u> 𝐖𝐈𝐓𝐇𝐃𝐑𝐀𝐖𝐀𝐋𝐒</u>
+        text = f"""<blockquote expandable>📤<u> 𝐖𝐈𝐓𝐇𝐃𝐑𝐀𝐖𝐀𝐋𝐒</u></blockquote>
 ◈ ━━━━━━ ⸙ ━━━━━━ ◈
 💰 𝗠𝗶𝗻𝗶𝗺𝘂𝗺 𝗪𝗶𝘁𝗵𝗱𝗿𝗮𝘄𝗮𝗹: ₹𝟳𝟬
 💳 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗕𝗮𝗹𝗮𝗻𝗰𝗲: ₹𝟱𝟬
@@ -393,7 +403,7 @@ def register_handlers(app: Client):
     async def statistics_handler(client: Client, msg: Message):
 
         # ✏️ YAHAN APNA TEXT LIKHO
-        text = f"""📊 <u>𝐒𝐓𝐀𝐓𝐈𝐒𝐓𝐈𝐂𝐒</u>
+        text = f"""<blockquote expandable>📊 <u>𝐒𝐓𝐀𝐓𝐈𝐒𝐓𝐈𝐂𝐒</u></blockquote>
 👤 𝗧𝗼𝘁𝗮𝗹 𝗧𝗮𝘀𝗸𝘀: 𝟯 + <b>Rafer</b>
 ✅ 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱 𝗧𝗮𝘀𝗸𝘀: 𝟬
 💰 𝗧𝗼𝘁𝗮𝗹 𝗘𝗮𝗿𝗻𝗶𝗻𝗴𝘀: 𝟬"""
