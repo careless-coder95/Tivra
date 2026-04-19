@@ -175,15 +175,21 @@ def register_handlers(app: Client):
         # ✏️ WELCOME TEXT — Force join se pehle
         welcome_before = f"""<blockquote expandable><b>👋 𝗛𝗘𝗟𝗟𝗢𝗪, <a href='tg://user?id={user_id}'>{user_name}</a>!</b></blockquote>
 💐 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 {title}
+
 📲 𝗝𝗢𝗜𝗡 𝟱 𝗥𝗘𝗤𝗨𝗜𝗥𝗘𝗗 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗔𝗡𝗗 𝗚𝗘𝗧 ₹𝟰𝟬𝟬
-🔓 𝗠𝗨𝗦𝗧 𝗝𝗢𝗜𝗡 𝗔𝗟𝗟 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗧𝗢 𝗨𝗡𝗟𝗢𝗖𝗞 𝗕𝗢𝗧. 
+
+🔓 𝗠𝗨𝗦𝗧 𝗝𝗢𝗜𝗡 𝗔𝗟𝗟 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗧𝗢 𝗨𝗡𝗟𝗢𝗖𝗞 𝗕𝗢𝗧.
+
 ✅ 𝗔𝗙𝗧𝗘𝗥 𝗝𝗢𝗜𝗡𝗜𝗡𝗚 𝗖𝗟𝗜𝗖𝗞 𝗩𝗘𝗥𝗜𝗙𝗬 ✅"""
 
         # ✏️ WELCOME TEXT — Verify ke baad
         welcome_after = f"""<blockquote expandable><b>👋🏻 𝗛𝗘𝗟𝗟𝗢, <a href='tg://user?id={user_id}'>{user_name}</a>!</b>
 💰𝗝𝗨𝗦𝗧 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗔𝗡𝗬 𝗧𝗔𝗦𝗞𝗦 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗡𝗘𝗬
+
 📲 𝗥𝗔𝗙𝗘𝗥 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗥𝗘 𝗠𝗢𝗡𝗘𝗬. 
+
 📤 𝗗𝗜𝗥𝗘𝗖𝗧𝗟𝗬 𝗪𝗜𝗧𝗛𝗗𝗥𝗔𝗪𝗔𝗟 𝗜𝗡 𝗬𝗢𝗨 𝗨𝗣𝗜 / 𝗕𝗔𝗡𝗞 𝗔𝗖𝗖𝗢𝗨𝗡𝗧. <blockquote expandable>
+
 ✅ 𝗖𝗛𝗘𝗔𝗞𝗢𝗨𝗧 𝗔𝗟𝗟 𝗠𝗘𝗡𝗨 𝗕𝗨𝗧𝗧𝗢𝗡𝗦 𝗧𝗢 𝗜𝗡𝗧𝗥𝗔𝗖𝗧.</blockquote>"""
 
         if not joined:
@@ -295,6 +301,7 @@ def register_handlers(app: Client):
 
         # ✏️ TASK & EARN TEXT — Yahan apna text likho
         text = f"""👋 𝗛𝗲𝘆 𝗨𝘀𝗲𝗿!
+
 🎯 𝗝𝘂𝘀𝘁 𝟮 𝗧𝗮𝘀𝗸 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗞𝗮𝗿𝗼
 🤑 ₹𝟮𝟬𝟬 𝗜𝗻𝘀𝘁𝗮𝗻𝘁 𝗘𝗮𝗿𝗻 𝗞𝗮𝗿𝗼
         
@@ -323,9 +330,8 @@ def register_handlers(app: Client):
     @app.on_message(filters.text & filters.private & filters.regex("^💸 Claim ₹200$"))
     async def claim_200_handler(client: Client, msg: Message):
         await msg.reply_text(
-            "⚠️ 𝗣𝗹𝗲𝗮𝘀𝗲 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗔𝗹𝗹 𝟮 𝗧𝗮𝘀𝗸𝘀 𝗙𝗶𝗿𝘀𝘁!\n"
-            "✅ 𝗙𝗿𝗶𝘀𝘁 𝗝𝗼𝗶𝗻 𝗮𝗻𝗱 𝘁𝗵𝗲𝗻 𝗖𝗹𝗮𝗶𝗺 𝘆𝗼𝘂𝗿 ₹𝟮𝟬𝟬.\n"
-            "🚨 𝗧𝗮𝘀𝗸 𝗣𝘂𝗿𝗮 𝗞𝗶𝗲 𝗕𝗶𝗻𝗮 𝗖𝗹𝗮𝗶𝗺 𝗡𝗮𝗵𝗶𝗻 𝗛𝗼𝗴𝗮 🙅",
+            "⚠️ 𝗣𝗹𝗲𝗮𝘀𝗲 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗔𝗹𝗹 𝟮 𝗧𝗮𝘀𝗸𝘀 𝗙𝗶𝗿𝘀𝘁!\n\n"
+            "✅ 𝗙𝗶𝗿𝘀𝘁 𝗝𝗼𝗶𝗻 𝗮𝗻𝗱 𝘁𝗵𝗲𝗻 𝗖𝗹𝗮𝗶𝗺 𝘆𝗼𝘂𝗿 ₹𝟮𝟬𝟬.\n",
             parse_mode=enums.ParseMode.HTML,
             reply_markup=get_task_keyboard(),
         )
@@ -346,6 +352,7 @@ def register_handlers(app: Client):
 
         # ✏️ YAHAN APNA TEXT LIKHO
         text = f"""🤑 𝗣𝗘𝗥 𝗥𝗘𝗙𝗘𝗥 ₹𝟭𝟬
+        
 🤵‍♂ 𝗬𝗢𝗨𝗥 𝗥𝗘𝗙𝗘𝗥𝗥𝗔𝗟 𝗟𝗜𝗡𝗞:
 ➥  {rafer}
         
@@ -372,6 +379,7 @@ def register_handlers(app: Client):
         # ✏️ YAHAN APNA TEXT LIKHO
         text = f"""<blockquote expandable>𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗡𝗢𝗪 & 𝗚𝗘𝗧 ₹𝟱𝟬𝟬 ❤️</blockquote>
 🎁 <u>𝗦𝗣𝗘𝗖𝗜𝗔𝗟 𝗢𝗙𝗙𝗘𝗥 𝗕𝗘𝗟𝗢𝗪</u> 👇
+
 🔗 𝗟𝗜𝗡𝗞: {rafer_app}
 
 📲 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗧𝗛𝗘 𝗔𝗣𝗣, 𝗔𝗗𝗗 𝗬𝗢𝗨𝗥 𝗨𝗣𝗜 𝗗𝗘𝗧𝗔𝗜𝗟𝗦, 𝗔𝗡𝗗 𝗪𝗜𝗧𝗛𝗗𝗥𝗔𝗪 𝗬𝗢𝗨𝗥 𝗘𝗔𝗥𝗡𝗜𝗡𝗚𝗦 𝗘𝗔𝗦𝗜𝗟𝗬.
@@ -380,7 +388,7 @@ def register_handlers(app: Client):
 
         # ✏️ INLINE BUTTON
         inline_buttons = InlineKeyboardMarkup([
-            [InlineKeyboardButton("💸 𝗖𝗟𝗔𝗜𝗠 𝗡𝗢𝗪", callback_data="do_claim_500")],
+            [InlineKeyboardButton("💸 𝗖𝗟𝗔𝗜𝗠 𝗡𝗢𝗪", url=f"https://t.me/{rafer_app}")],
         ])
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML, reply_markup=inline_buttons)
@@ -410,7 +418,9 @@ def register_handlers(app: Client):
         # ✏️ YAHAN APNA TEXT LIKHO
         text = f"""<blockquote expandable>📊 <u>𝐒𝐓𝐀𝐓𝐈𝐒𝐓𝐈𝐂𝐒</u></blockquote>
 👤 𝗧𝗼𝘁𝗮𝗹 𝗧𝗮𝘀𝗸𝘀: 𝟯 + <b>Rafer</b>
+
 ✅ 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱 𝗧𝗮𝘀𝗸𝘀: 𝟬
+
 💰 𝗧𝗼𝘁𝗮𝗹 𝗘𝗮𝗿𝗻𝗶𝗻𝗴𝘀: 𝟬"""
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML)
@@ -425,7 +435,9 @@ def register_handlers(app: Client):
         text = f"""<blockquote expandable>❓ <u>𝗛𝗢𝗪 𝗧𝗢 𝗘𝗔𝗥𝗡</u></blockquote>
 ◈ ━━━━━━ ⸙ ━━━━━━ ◈
 📝 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗧𝗔𝗦𝗞 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 ₹𝟮𝟬𝟬. 
+
 📱 𝗠𝗔𝗞𝗘 𝗔𝗖𝗖𝗢𝗨𝗡𝗧 𝗧𝗛𝗥𝗢𝗨𝗚𝗛 𝗟𝗜𝗡𝗞 𝗔𝗡𝗗 𝗚𝗘𝗧 ₹𝟱𝟬𝟬. 
+
 📲 𝗥𝗘𝗙𝗘𝗥 𝗧𝗛𝗜𝗦 𝗣𝗛𝗢𝗧𝗢 𝗬𝗢𝗨𝗥 𝗙𝗥𝗜𝗘𝗡𝗗𝗦 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 ₹𝟭𝟬 𝗣𝗘𝗥 𝗥𝗔𝗙𝗘𝗥. """
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML)
