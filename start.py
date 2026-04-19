@@ -29,10 +29,10 @@ TASK_CHANNELS = [
 ]
 
 # Task & Earn image
-TASK_IMAGE = "AgACAgUAAxkBAAMCaeJgQzT8-hyPDedVeMWxiC_p02QAAmESaxvg8RBXjYEx96kJgK0BAAMCAAN5AAM7BA"  # 👈 Task wali image ka file_id
+TASK_IMAGE = "https://files.catbox.moe/3rdf9a.jpg"  # 👈 Task wali image ka file_id
 
 # Refer & Earn image
-REFER_IMAGE = "AgACAgUAAxkBAAMCaeJgQzT8-hyPDedVeMWxiC_p02QAAmESaxvg8RBXjYEx96kJgK0BAAMCAAN5AAM7BA"  # 👈 Refer wali image ka file_id yahan daalo
+REFER_IMAGE = "https://files.catbox.moe/yp0cak.jpg"  # 👈 Refer wali image ka file_id yahan daalo
 
 
 # ==============================================================
