@@ -437,6 +437,8 @@ def register_handlers(app: Client):
 
 📱 𝗠𝗔𝗞𝗘 𝗔𝗖𝗖𝗢𝗨𝗡𝗧 𝗧𝗛𝗥𝗢𝗨𝗚𝗛 𝗟𝗜𝗡𝗞 𝗔𝗡𝗗 𝗚𝗘𝗧 ₹𝟱𝟬𝟬. 
 
-📲 𝗥𝗘𝗙𝗘𝗥 𝗧𝗛𝗜𝗦 𝗣𝗛𝗢𝗧𝗢 𝗬𝗢𝗨𝗥 𝗙𝗥𝗜𝗘𝗡𝗗𝗦 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 ₹𝟭𝟬 𝗣𝗘𝗥 𝗥𝗔𝗙𝗘𝗥. """
+📲 𝗥𝗘𝗙𝗘𝗥 𝗧𝗛𝗜𝗦 𝗣𝗛𝗢𝗧𝗢 𝗬𝗢𝗨𝗥 𝗙𝗥𝗜𝗘𝗡𝗗𝗦 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 ₹𝟭𝟬 𝗣𝗘𝗥 𝗥𝗔𝗙𝗘𝗥. 
+
+<blockquote expandable>❖ 𝐵𝑜𝑡 𝐷𝑒𝑣𝑒𝑙𝑜𝑝𝑒𝑑 𝑏𝑦 <a href="https://t.me/anya_bots">𝐴𝑛𝑦𝑎 𝐵𝑜𝑡𝑠</a>.</blockquote>"""
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML)
