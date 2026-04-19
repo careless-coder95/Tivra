@@ -43,7 +43,7 @@ rafer="https://t.me/Dkgkmemfcbot"       #rafer link [ bot link ]
 username=""        #admin username without @
 support=""         #support group username without @
 bot_username=""  #bot username without @
-
+rafer_app=""    # rafer app link 
 
 
 # ==============================================================
@@ -370,10 +370,13 @@ def register_handlers(app: Client):
     async def claim_500_handler(client: Client, msg: Message):
 
         # ✏️ YAHAN APNA TEXT LIKHO
-        text = f"""
-        
-        
-        """
+        text = f"""<blockquote expandable>𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗡𝗢𝗪 & 𝗚𝗘𝗧 ₹𝟱𝟬𝟬 ❤️</blockquote>
+🎁 <u>𝗦𝗣𝗘𝗖𝗜𝗔𝗟 𝗢𝗙𝗙𝗘𝗥 𝗕𝗘𝗟𝗢𝗪</u> 👇
+🔗 𝗟𝗜𝗡𝗞: {rafer_app}
+
+📲 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗧𝗛𝗘 𝗔𝗣𝗣, 𝗔𝗗𝗗 𝗬𝗢𝗨𝗥 𝗨𝗣𝗜 𝗗𝗘𝗧𝗔𝗜𝗟𝗦, 𝗔𝗡𝗗 𝗪𝗜𝗧𝗛𝗗𝗥𝗔𝗪 𝗬𝗢𝗨𝗥 𝗘𝗔𝗥𝗡𝗜𝗡𝗚𝗦 𝗘𝗔𝗦𝗜𝗟𝗬.
+
+💸 𝗚𝗘𝗧 ₹𝟱𝟬𝟬 𝗙𝗥𝗘𝗘 𝗜𝗡𝗦𝗧𝗔𝗡𝗧𝗟𝗬!"""
 
         # ✏️ INLINE BUTTON
         inline_buttons = InlineKeyboardMarkup([
