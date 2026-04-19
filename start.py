@@ -35,6 +35,8 @@ TASK_IMAGE = "https://files.catbox.moe/3rdf9a.jpg"  # 👈 Task wali image ka fi
 REFER_IMAGE = "https://files.catbox.moe/yp0cak.jpg"  # 👈 Refer wali image ka file_id yahan daalo
 
 title="𝗔𝗡𝗬𝗔 𝗕𝗢𝗧𝗦"
+rafer="https://t.me/Dkgkmemfcbot"
+
 
 # ==============================================================
 # 🎹 KEYBOARDS
@@ -291,13 +293,13 @@ def register_handlers(app: Client):
     async def task_earn_handler(client: Client, msg: Message):
 
         # ✏️ TASK & EARN TEXT — Yahan apna text likho
-        text = f"""<b>🏦 TASK & EARN</b>
-━━━━━━━━━━━━━━━━━━━━
-
-➻ Niche diye channels join karo.
-➻ Join karne ke baad <b>Claim ₹200</b> button dabao.
-
-<i>Dono channels join karna zaroori hai!</i>"""
+        text = f"""👋 𝗛𝗲𝘆 𝗨𝘀𝗲𝗿!
+        🎯 𝗝𝘂𝘀𝘁 𝟮 𝗧𝗮𝘀𝗸 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗞𝗮𝗿𝗼
+        🤑 ₹𝟮𝟬𝟬 𝗜𝗻𝘀𝘁𝗮𝗻𝘁 𝗘𝗮𝗿𝗻 𝗞𝗮𝗿𝗼
+        
+        🔒 𝗪𝗶𝘁𝗵𝗱𝗿𝗮𝘄𝗮𝗹 𝗔𝘂𝘁𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 𝗛𝗼𝗷𝗮𝗲𝗴𝗮
+        👍 𝗙𝗮𝘀𝘁 & 𝗘𝗮𝘀𝘆 𝗧𝗮𝘀𝗸. 
+        """
 
         await client.send_photo(
             chat_id=msg.chat.id,
@@ -309,7 +311,7 @@ def register_handlers(app: Client):
         # Niche menu: Claim ₹200 + Back
         await client.send_message(
             chat_id=msg.chat.id,
-            text="👇 <b>Channels join karne ke baad Claim karo:</b>",
+            text="⌛ 𝗙𝗿𝗶𝘀𝘁 𝗝𝗼𝗶𝗻 𝗮𝗻𝗱 𝘁𝗵𝗲𝗻 𝗖𝗹𝗮𝗶𝗺 𝘆𝗼𝘂𝗿 ₹𝟮𝟬𝟬.",
             parse_mode=enums.ParseMode.HTML,
             reply_markup=get_task_keyboard(),
         )
@@ -321,10 +323,9 @@ def register_handlers(app: Client):
     @app.on_message(filters.text & filters.private & filters.regex("^💸 Claim ₹200$"))
     async def claim_200_handler(client: Client, msg: Message):
         await msg.reply_text(
-            "❌ <b>Aapne abhi tak dono channels join nahi kiye!</b>\n\n"
-            "➻ Pehle dono channels join karo.\n"
-            "➻ Phir Claim karo.\n\n"
-            "<i>Bina join kiye claim nahi milega! 🙅</i>",
+            "⚠️ 𝗣𝗹𝗲𝗮𝘀𝗲 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗔𝗹𝗹 𝟮 𝗧𝗮𝘀𝗸𝘀 𝗙𝗶𝗿𝘀𝘁!\n"
+            "✅ 𝗙𝗿𝗶𝘀𝘁 𝗝𝗼𝗶𝗻 𝗮𝗻𝗱 𝘁𝗵𝗲𝗻 𝗖𝗹𝗮𝗶𝗺 𝘆𝗼𝘂𝗿 ₹𝟮𝟬𝟬.\n"
+            "🚨 𝗧𝗮𝘀𝗸 𝗣𝘂𝗿𝗮 𝗞𝗶𝗲 𝗕𝗶𝗻𝗮 𝗖𝗹𝗮𝗶𝗺 𝗡𝗮𝗵𝗶𝗻 𝗛𝗼𝗴𝗮 🙅",
             parse_mode=enums.ParseMode.HTML,
             reply_markup=get_task_keyboard(),
         )
@@ -344,16 +345,16 @@ def register_handlers(app: Client):
     async def refer_earn_handler(client: Client, msg: Message):
 
         # ✏️ YAHAN APNA TEXT LIKHO
-        text = f"""<b>📲 REFER & EARN</b>
-━━━━━━━━━━━━━━━━━━━━
-
-➻ Yahan refer & earn ka description likho.
-➻ <b>Reward per referral, conditions</b> etc."""
+        text = f"""🤑 𝗣𝗘𝗥 𝗥𝗘𝗙𝗘𝗥 ₹𝟭𝟬
+        🤵‍♂ 𝗬𝗢𝗨𝗥 𝗥𝗘𝗙𝗘𝗥𝗥𝗔𝗟 𝗟𝗜𝗡𝗞:
+        ➥  {rafer}
+        
+        🔍 𝗦𝗛𝗔𝗥𝗘 𝗪𝗜𝗧𝗛 𝗬𝗢𝗨𝗥 𝗙𝗥𝗜𝗘𝗡𝗗𝗦 & 𝗙𝗔𝗠𝗜𝗟𝗬 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 ₹𝟭𝟬 💰
+        """
 
         # ✏️ INLINE BUTTON — Yahan apna button set karo
         inline_buttons = InlineKeyboardMarkup([
-            [InlineKeyboardButton("🔗 Share Referral Link", url="https://t.me/share/url?url=YOUR_LINK")],
-            [InlineKeyboardButton("📋 My Referrals",        callback_data="my_referrals")],
+            [InlineKeyboardButton("🔗 LINK", url="https://t.me/Dkgkmemfcbot")],
         ])
 
         await msg.reply_photo(
@@ -370,11 +371,9 @@ def register_handlers(app: Client):
     async def claim_500_handler(client: Client, msg: Message):
 
         # ✏️ YAHAN APNA TEXT LIKHO
-        text = f"""<b>💸 CLAIM ₹500</b>
-━━━━━━━━━━━━━━━━━━━━
-
-➻ Yahan claim ka description likho.
-➻ <b>Conditions, steps, eligibility</b> etc."""
+        text = f"""
+        
+        """
 
         # ✏️ INLINE BUTTON
         inline_buttons = InlineKeyboardMarkup([
