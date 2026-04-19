@@ -40,10 +40,10 @@ REFER_IMAGE = "https://files.catbox.moe/yp0cak.jpg"  # 👈 Refer wali image ka 
 
 title="𝗔𝗡𝗬𝗔 𝗕𝗢𝗧𝗦"     # bot name
 rafer="https://t.me/Dkgkmemfcbot"       #rafer link [ bot link ]
-username=""        #admin username without @
-support=""         #support group username without @
-bot_username=""  #bot username without @
-rafer_app=""    # rafer app link 
+username="CarelessxOwner"        #admin username without @
+support="CarelessxWorld"         #support group username without @
+bot_username="Dkgkmemfcbot"  #bot username without @
+rafer_app="https://h5.sw-smart2.com?invite=NMY42ZRL"    # rafer app link 
 
 
 # ==============================================================
@@ -422,10 +422,10 @@ def register_handlers(app: Client):
     async def how_to_earn_handler(client: Client, msg: Message):
 
         # ✏️ YAHAN APNA TEXT LIKHO
-        text = f"""<b>❓ HOW TO EARN</b>
-━━━━━━━━━━━━━━━━━━━━
-
-➻ Yahan earning guide likho.
-➻ <b>Steps, tips, methods</b> etc."""
+        text = f"""<blockquote expandable>❓ <u>𝗛𝗢𝗪 𝗧𝗢 𝗘𝗔𝗥𝗡</u></blockquote>
+◈ ━━━━━━ ⸙ ━━━━━━ ◈
+📝 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗧𝗔𝗦𝗞 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 ₹𝟮𝟬𝟬. 
+📱 𝗠𝗔𝗞𝗘 𝗔𝗖𝗖𝗢𝗨𝗡𝗧 𝗧𝗛𝗥𝗢𝗨𝗚𝗛 𝗟𝗜𝗡𝗞 𝗔𝗡𝗗 𝗚𝗘𝗧 ₹𝟱𝟬𝟬. 
+📲 𝗥𝗘𝗙𝗘𝗥 𝗧𝗛𝗜𝗦 𝗣𝗛𝗢𝗧𝗢 𝗬𝗢𝗨𝗥 𝗙𝗥𝗜𝗘𝗡𝗗𝗦 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 ₹𝟭𝟬 𝗣𝗘𝗥 𝗥𝗔𝗙𝗘𝗥. """
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML)
