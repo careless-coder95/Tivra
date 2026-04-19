@@ -441,4 +441,8 @@ def register_handlers(app: Client):
 
 <blockquote expandable>❖ 𝐵𝑜𝑡 𝐷𝑒𝑣𝑒𝑙𝑜𝑝𝑒𝑑 𝑏𝑦 <a href="https://t.me/anya_bots">𝐴𝑛𝑦𝑎 𝐵𝑜𝑡𝑠</a>.</blockquote>"""
 
-        await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML)
+        await msg.reply_text(
+            text=text,
+            parse_mode=enums.ParseMode.HTML,
+            disable_web_page_preview=True
+        )
