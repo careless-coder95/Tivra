@@ -166,26 +166,19 @@ def register_handlers(app: Client):
         joined, missing = await check_fsub(client, user_id)
 
         # ✏️ WELCOME TEXT — Force join se pehle
-        welcome_before = f"""<blockquote expandable><b>👋 𝗛𝗲𝗹𝗹𝗼𝘄, <a href='tg://user?id={user_id}'>{user_name}</a>!</b></blockquote>
-        <blockquote>
-        💐 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 {title}!
-        🤑 𝗝𝗼𝗶𝗻 𝟱 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗔𝗻𝗱 𝗚𝗲𝘁 ₹𝟯𝟴𝟬
-        📌 𝗠𝘂𝘀𝘁 𝗝𝗼𝗶𝗻 𝗔𝗹𝗹 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗧𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 𝗕𝗼𝘁
-        </blockquote> <blockquote>
-        ✔️ 𝗔𝗳𝘁𝗲𝗿 𝗝𝗼𝗶𝗻𝗶𝗻𝗴, 𝗖𝗹𝗶𝗰𝗸 𝗩𝗘𝗥𝗜𝗙𝗬 🔒
-        </blockquote>"""
+        welcome_before = f"""<blockquote expandable><b>👋 𝗛𝗘𝗟𝗟𝗢𝗪, <a href='tg://user?id={user_id}'>{user_name}</a>!</b></blockquote>
+💐 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 {title}!
+🤑 𝗝𝗼𝗶𝗻 𝟱 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗔𝗻𝗱 𝗚𝗲𝘁 ₹𝟯𝟴𝟬
+📌 𝗠𝘂𝘀𝘁 𝗝𝗼𝗶𝗻 𝗔𝗹𝗹 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗧𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 𝗕𝗼𝘁
+✔️ 𝗔𝗳𝘁𝗲𝗿 𝗝𝗼𝗶𝗻𝗶𝗻𝗴, 𝗖𝗹𝗶𝗰𝗸 𝗩𝗘𝗥𝗜𝗙𝗬 🔒"""
 
         # ✏️ WELCOME TEXT — Verify ke baad
-        welcome_after = f"""<blockquote expandable><b>👋🏻 𝗛𝗘𝗟𝗟𝗢, <a href='tg://user?id={user_id}'>{user_name}</a>!</b></blockquote>
-        <blockquote>
-        📝 𝗝𝗨𝗦𝗧 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗔𝗡𝗬 𝗧𝗔𝗦𝗞𝗦 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗡𝗘𝗬 💰
-        📲 𝗥𝗔𝗙𝗘𝗥 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗥𝗘 𝗠𝗢𝗡𝗘𝗬. 
-        📤 𝗗𝗜𝗥𝗘𝗖𝗧𝗟𝗬 𝗪𝗜𝗧𝗛𝗗𝗥𝗔𝗪𝗔𝗟 𝗜𝗡 𝗬𝗢𝗨 𝗨𝗣𝗜 / 𝗕𝗔𝗡𝗞 𝗔𝗖𝗖𝗢𝗨𝗡𝗧.
-        </blockquote>
-        <blockquote expandable>
-        ✅ 𝗖𝗛𝗘𝗔𝗞𝗢𝗨𝗧 𝗔𝗟𝗟 𝗠𝗘𝗡𝗨 𝗕𝗨𝗧𝗧𝗢𝗡𝗦 𝗧𝗢 𝗜𝗡𝗧𝗥𝗔𝗖𝗧.
-        </blockquote>
-        """
+        welcome_after = f"""<blockquote expandable><b>👋🏻 𝗛𝗘𝗟𝗟𝗢, <a href='tg://user?id={user_id}'>{user_name}</a>!</b></blockquote><blockquote>
+📝 𝗝𝗨𝗦𝗧 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘 𝗔𝗡𝗬 𝗧𝗔𝗦𝗞𝗦 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗡𝗘𝗬 💰
+📲 𝗥𝗔𝗙𝗘𝗥 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 𝗠𝗢𝗥𝗘 𝗠𝗢𝗡𝗘𝗬. 
+📤 𝗗𝗜𝗥𝗘𝗖𝗧𝗟𝗬 𝗪𝗜𝗧𝗛𝗗𝗥𝗔𝗪𝗔𝗟 𝗜𝗡 𝗬𝗢𝗨 𝗨𝗣𝗜 / 𝗕𝗔𝗡𝗞 𝗔𝗖𝗖𝗢𝗨𝗡𝗧.
+</blockquote> <blockquote expandable>
+✅ 𝗖𝗛𝗘𝗔𝗞𝗢𝗨𝗧 𝗔𝗟𝗟 𝗠𝗘𝗡𝗨 𝗕𝗨𝗧𝗧𝗢𝗡𝗦 𝗧𝗢 𝗜𝗡𝗧𝗥𝗔𝗖𝗧.</blockquote>"""
 
         if not joined:
             await client.send_photo(
@@ -202,9 +195,8 @@ def register_handlers(app: Client):
                 reply_markup=get_verify_keyboard(),
             )
         else:
-            await client.send_photo(
+            await client.send_message(
                 chat_id=msg.chat.id,
-                photo=WELCOME_IMAGE_AFTER,
                 caption=welcome_after,
                 parse_mode=enums.ParseMode.HTML,
             )
@@ -255,14 +247,11 @@ def register_handlers(app: Client):
 
         # ✏️ YAHAN APNA TEXT LIKHO
         text = f"""<blockquote expandable>💰 <u>𝐘𝐎𝐔𝐑 𝐁𝐀𝐋𝐀𝐍𝐂𝐄</u></blockquote>
-        ◈ ━━━━━━ ⸙ ━━━━━━ ◈
-        🎉 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗕𝗼𝗻𝘂𝘀 : ₹𝟱𝟬
-        💸 𝗬𝗼𝘂𝗿 𝗘𝗮𝗿𝗻𝗶𝗻𝗴 : ₹𝟬
-        💰 𝗧𝗼𝘁𝗮𝗹 𝗕𝗮𝗹𝗮𝗻𝗰𝗲 : ₹𝟱𝟬
-        <blockquote>
-        ✅ 𝗦𝘁𝗮𝗿𝘁 𝗘𝗮𝗿𝗻𝗶𝗻𝗴 𝗕𝘆 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗶𝗻𝗴 𝗧𝗮𝘀𝗸𝘀.
-        </blockquote>
-        """
+◈ ━━━━━━ ⸙ ━━━━━━ ◈
+🎉 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗕𝗼𝗻𝘂𝘀 : ₹𝟱𝟬
+💸 𝗬𝗼𝘂𝗿 𝗘𝗮𝗿𝗻𝗶𝗻𝗴 : ₹𝟬
+💰 𝗧𝗼𝘁𝗮𝗹 𝗕𝗮𝗹𝗮𝗻𝗰𝗲 : ₹𝟱𝟬
+<blockquote>✅ 𝗦𝘁𝗮𝗿𝘁 𝗘𝗮𝗿𝗻𝗶𝗻𝗴 𝗕𝘆 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗶𝗻𝗴 𝗧𝗮𝘀𝗸𝘀.</blockquote>"""
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML)
 
@@ -294,12 +283,11 @@ def register_handlers(app: Client):
 
         # ✏️ TASK & EARN TEXT — Yahan apna text likho
         text = f"""👋 𝗛𝗲𝘆 𝗨𝘀𝗲𝗿!
-        🎯 𝗝𝘂𝘀𝘁 𝟮 𝗧𝗮𝘀𝗸 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗞𝗮𝗿𝗼
-        🤑 ₹𝟮𝟬𝟬 𝗜𝗻𝘀𝘁𝗮𝗻𝘁 𝗘𝗮𝗿𝗻 𝗞𝗮𝗿𝗼
+🎯 𝗝𝘂𝘀𝘁 𝟮 𝗧𝗮𝘀𝗸 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗞𝗮𝗿𝗼
+🤑 ₹𝟮𝟬𝟬 𝗜𝗻𝘀𝘁𝗮𝗻𝘁 𝗘𝗮𝗿𝗻 𝗞𝗮𝗿𝗼
         
-        🔒 𝗪𝗶𝘁𝗵𝗱𝗿𝗮𝘄𝗮𝗹 𝗔𝘂𝘁𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 𝗛𝗼𝗷𝗮𝗲𝗴𝗮
-        👍 𝗙𝗮𝘀𝘁 & 𝗘𝗮𝘀𝘆 𝗧𝗮𝘀𝗸. 
-        """
+🔒 𝗪𝗶𝘁𝗵𝗱𝗿𝗮𝘄𝗮𝗹 𝗔𝘂𝘁𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 𝗛𝗼𝗷𝗮𝗲𝗴𝗮
+👍 𝗙𝗮𝘀𝘁 & 𝗘𝗮𝘀𝘆 𝗧𝗮𝘀𝗸."""
 
         await client.send_photo(
             chat_id=msg.chat.id,
@@ -346,11 +334,10 @@ def register_handlers(app: Client):
 
         # ✏️ YAHAN APNA TEXT LIKHO
         text = f"""🤑 𝗣𝗘𝗥 𝗥𝗘𝗙𝗘𝗥 ₹𝟭𝟬
-        🤵‍♂ 𝗬𝗢𝗨𝗥 𝗥𝗘𝗙𝗘𝗥𝗥𝗔𝗟 𝗟𝗜𝗡𝗞:
-        ➥  {rafer}
+🤵‍♂ 𝗬𝗢𝗨𝗥 𝗥𝗘𝗙𝗘𝗥𝗥𝗔𝗟 𝗟𝗜𝗡𝗞:
+➥  {rafer}
         
-        🔍 𝗦𝗛𝗔𝗥𝗘 𝗪𝗜𝗧𝗛 𝗬𝗢𝗨𝗥 𝗙𝗥𝗜𝗘𝗡𝗗𝗦 & 𝗙𝗔𝗠𝗜𝗟𝗬 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 ₹𝟭𝟬 💰
-        """
+🔍 𝗦𝗛𝗔𝗥𝗘 𝗪𝗜𝗧𝗛 𝗬𝗢𝗨𝗥 𝗙𝗥𝗜𝗘𝗡𝗗𝗦 & 𝗙𝗔𝗠𝗜𝗟𝗬 𝗔𝗡𝗗 𝗘𝗔𝗥𝗡 ₹𝟭𝟬 💰"""
 
         # ✏️ INLINE BUTTON — Yahan apna button set karo
         inline_buttons = InlineKeyboardMarkup([
@@ -391,12 +378,11 @@ def register_handlers(app: Client):
 
         # ✏️ YAHAN APNA TEXT LIKHO
         text = f"""📤<u> 𝐖𝐈𝐓𝐇𝐃𝐑𝐀𝐖𝐀𝐋𝐒</u>
-        ◈ ━━━━━━ ⸙ ━━━━━━ ◈
-        💰 𝗠𝗶𝗻𝗶𝗺𝘂𝗺 𝗪𝗶𝘁𝗵𝗱𝗿𝗮𝘄𝗮𝗹: ₹𝟳𝟬
-        💳 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗕𝗮𝗹𝗮𝗻𝗰𝗲: ₹𝟱𝟬
+◈ ━━━━━━ ⸙ ━━━━━━ ◈
+💰 𝗠𝗶𝗻𝗶𝗺𝘂𝗺 𝗪𝗶𝘁𝗵𝗱𝗿𝗮𝘄𝗮𝗹: ₹𝟳𝟬
+💳 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗕𝗮𝗹𝗮𝗻𝗰𝗲: ₹𝟱𝟬
         
-        ✅ 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝘁𝗮𝘀𝗸𝘀 𝘁𝗼 𝗲𝗮𝗿𝗻 𝗮𝗻𝗱 𝘂𝗻𝗹𝗼𝗰𝗸 𝘄𝗶𝘁𝗵𝗱𝗿𝗮𝘄𝗮𝗹.
-        """
+✅ 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝘁𝗮𝘀𝗸𝘀 𝘁𝗼 𝗲𝗮𝗿𝗻 𝗮𝗻𝗱 𝘂𝗻𝗹𝗼𝗰𝗸 𝘄𝗶𝘁𝗵𝗱𝗿𝗮𝘄𝗮𝗹."""
         
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML)
 
@@ -408,10 +394,9 @@ def register_handlers(app: Client):
 
         # ✏️ YAHAN APNA TEXT LIKHO
         text = f"""📊 <u>𝐒𝐓𝐀𝐓𝐈𝐒𝐓𝐈𝐂𝐒</u>
-        👤 𝗧𝗼𝘁𝗮𝗹 𝗧𝗮𝘀𝗸𝘀: 𝟯 + <b>Rafer</b>
-        ✅ 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱 𝗧𝗮𝘀𝗸𝘀: 𝟬
-        💰 𝗧𝗼𝘁𝗮𝗹 𝗘𝗮𝗿𝗻𝗶𝗻𝗴𝘀: 𝟬
-        """
+👤 𝗧𝗼𝘁𝗮𝗹 𝗧𝗮𝘀𝗸𝘀: 𝟯 + <b>Rafer</b>
+✅ 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱 𝗧𝗮𝘀𝗸𝘀: 𝟬
+💰 𝗧𝗼𝘁𝗮𝗹 𝗘𝗮𝗿𝗻𝗶𝗻𝗴𝘀: 𝟬"""
 
         await msg.reply_text(text=text, parse_mode=enums.ParseMode.HTML)
 
