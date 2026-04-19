@@ -32,7 +32,7 @@ TASK_CHANNELS = [
 TASK_IMAGE = "https://files.catbox.moe/3rdf9a.jpg"  # 👈 Task wali image ka file_id
 
 # Refer & Earn image
-REFER_IMAGE = "https://files.catbox.moe/yp0cak.jpg"  # 👈 Refer wali image ka file_id yahan daalo
+REFER_IMAGE = "https://d.uguu.se/frcApBNr.jpg"  # 👈 Refer wali image ka file_id yahan daalo
 
 # ==============================================================
 # 🔴 IMPORTANT VALUES 
