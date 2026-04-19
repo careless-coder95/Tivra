@@ -200,10 +200,9 @@ def register_handlers(app: Client):
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=get_fsub_inline(missing),
             )
-            await client.send_photo(
+            await client.send_message(
                 chat_id=msg.chat.id,
-                photo=WELCOME_IMAGE_AFTER,
-                caption="🤑 𝗝𝗼𝗶𝗻 𝟱 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗔𝗻𝗱 𝗚𝗲𝘁 ₹𝟰𝟬𝟬 𝗬𝗼𝘂𝗿 𝗨𝗣𝗜",
+                text="🤑 𝗝𝗼𝗶𝗻 𝟱 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗔𝗻𝗱 𝗚𝗲𝘁 ₹𝟰𝟬𝟬 𝗬𝗼𝘂𝗿 𝗨𝗣𝗜",
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=get_verify_keyboard(),
             )
