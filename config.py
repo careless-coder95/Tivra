@@ -50,5 +50,11 @@ REQUIRED_CHANNELS = [
     # Aur add karte jao...
 ]
 
-# ── WELCOME IMAGE FILE ID ──────────────────────────────────
-WELCOME_IMAGE = "https://n.uguu.se/xqNNNipL.jpg"
+# ── WELCOME IMAGES ─────────────────────────────────────────
+ 
+# Force join se PEHLE dikhne wali image
+WELCOME_IMAGE_BEFORE = "AgACAgUAAxkBAAMCaeJgQzT8-hyPDedVeMWxiC_p02QAAmESaxvg8RBXjYEx96kJgK0BAAMCAAN5AAM7BA"  # 👈 Pehle wali image file_id
+ 
+# Verify hone ke BAAD dikhne wali image
+WELCOME_IMAGE_AFTER  = "AgACAgUAAxkBAAMCaeJgQzT8-hyPDedVeMWxiC_p02QAAmESaxvg8RBXjYEx96kJgK0BAAMCAAN5AAM7BA"  # 👈 Doosri image ka file_id yahan daalo
+ 
