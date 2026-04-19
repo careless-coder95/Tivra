@@ -34,6 +34,7 @@ TASK_IMAGE = "https://files.catbox.moe/3rdf9a.jpg"  # 👈 Task wali image ka fi
 # Refer & Earn image
 REFER_IMAGE = "https://files.catbox.moe/yp0cak.jpg"  # 👈 Refer wali image ka file_id yahan daalo
 
+title="𝗔𝗡𝗬𝗔 𝗕𝗢𝗧𝗦"
 
 # ==============================================================
 # 🎹 KEYBOARDS
@@ -167,22 +168,15 @@ def register_handlers(app: Client):
 
         # ✏️ WELCOME TEXT — Force join se pehle
         welcome_before = f"""<b>👋 𝗛𝗲𝗹𝗹𝗼𝘄, <a href='tg://user?id={user_id}'>{user_name}</a>!</b>
-        💐 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 𝗔𝗡𝗬𝗔 𝗕𝗢𝗧𝗦!
+        💐 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 {title}!
         🤑 𝗝𝗼𝗶𝗻 𝟱 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗔𝗻𝗱 𝗚𝗲𝘁 ₹𝟯𝟴𝟬
         📌 𝗠𝘂𝘀𝘁 𝗝𝗼𝗶𝗻 𝗔𝗹𝗹 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗧𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 𝗕𝗼𝘁
         ✔️ 𝗔𝗳𝘁𝗲𝗿 𝗝𝗼𝗶𝗻𝗶𝗻𝗴, 𝗖𝗹𝗶𝗰𝗸 𝗩𝗘𝗥𝗜𝗙𝗬 🔒"""
 
         # ✏️ WELCOME TEXT — Verify ke baad
-        welcome_after = f"""<b>✅ Welcome, <a href='tg://user?id={user_id}'>{user_name}</a>!</b>
-
-╔══════════════════════════════╗
-║      <b>💳 TIVRA PAY BOT</b>        ║
-║    Fast · Safe · Reliable    ║
-╚══════════════════════════════╝
-
-➻ Yahan apna welcome text likho.
-
-✅ <b>Ab niche se apni service chunein!</b>"""
+        welcome_after = f"""<b>✅ 𝗛𝗲𝗹𝗹𝗼𝘄, <a href='tg://user?id={user_id}'>{user_name}</a>!</b>
+        
+        """
 
         if not joined:
             await client.send_photo(
@@ -194,7 +188,7 @@ def register_handlers(app: Client):
             )
             await client.send_message(
                 chat_id=msg.chat.id,
-                text="👇 <b>Sab join karne ke baad niche ka button dabao:</b>",
+                text="🤑 𝗝𝗼𝗶𝗻 𝟱 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗔𝗻𝗱 𝗚𝗲𝘁 ₹𝟰𝟬𝟬 𝗬𝗼𝘂𝗿 𝗨𝗣𝗜",
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=get_verify_keyboard(),
             )
@@ -218,13 +212,13 @@ def register_handlers(app: Client):
 
         if joined:
             await msg.reply_text(
-                "✅ <b>Verification successful! Ab bot use karo. 🎉</b>",
+                "✅ 𝗔𝗹𝗹 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗛𝗮𝘃𝗲 𝗕𝗲𝗲𝗻 𝗝𝗼𝗶𝗻𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆.",
                 parse_mode=enums.ParseMode.HTML,
             )
             await send_main_menu(client, msg.chat.id, user_name)
         else:
             await msg.reply_text(
-                f"❌ <b>Abhi bhi {len(missing)} channel(s) join nahi kiye!</b>\n\nJoin karo phir dobara Verify dabao.",
+                f"❌ 𝗛𝗮𝘃𝗲𝗻'𝘁 𝗷𝗼𝗶𝗻𝗲𝗱 𝗲𝘃𝗲𝗻 {len(missing)} 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝘆𝗲𝘁!\n ✅ 𝗝𝗼𝗶𝗻 𝗮𝗻𝗱 𝘁𝗵𝗲𝗻 𝗰𝗹𝗶𝗰𝗸 𝗩𝗲𝗿𝗶𝗳𝘆 𝗮𝗴𝗮𝗶𝗻.",
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=get_fsub_inline(missing),
             )
@@ -242,7 +236,7 @@ def register_handlers(app: Client):
             await cb.answer("✅ Verified!", show_alert=False)
             await send_main_menu(client, cb.message.chat.id, user_name)
         else:
-            await cb.answer(f"❌ Abhi bhi {len(missing)} channel(s) join nahi kiye!", show_alert=True)
+            await cb.answer(f"❌ 𝗛𝗮𝘃𝗲𝗻'𝘁 𝗷𝗼𝗶𝗻𝗲𝗱 𝗲𝘃𝗲𝗻 {len(missing)} 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝘆𝗲𝘁!!", show_alert=True)
 
     # ════════════════════════════════════════════════════════
     # 💰 BALANCE
