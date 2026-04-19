@@ -21,10 +21,10 @@ from config import ADMINS, REQUIRED_CHANNELS, WELCOME_IMAGE_BEFORE, WELCOME_IMAG
 # ==============================================================
 TASK_CHANNELS = [
     {
-        "link": "https://t.me/yourchannel1",   # 👈 Apna link daalo
+        "link": "https://t.me/+JGntuGUw1PNhYTQ1",   # 👈 Apna link daalo
     },
     {
-        "link": "https://t.me/yourchannel2",   # 👈 Apna link daalo
+        "link": "https://t.me/+RpTKZ1_u3mk5NDFl",   # 👈 Apna link daalo
     },
 ]
 
@@ -102,7 +102,7 @@ def get_fsub_inline(missing_channels: list):
     for ch in missing_channels:
         idx = ch.get("index", "?")
         flat_buttons.append(
-            InlineKeyboardButton(text=f"Join {idx} 🔗", url=ch["link"])
+            InlineKeyboardButton(text=f"𝗝𝗢𝗜𝗡 {idx} ", url=ch["link"])
         )
 
     rows = []
@@ -117,8 +117,8 @@ def get_task_inline():
     """Task & Earn ke inline join buttons — hamesha dikhenge."""
     return InlineKeyboardMarkup([
         [
-            InlineKeyboardButton("Join 1 🔗", url=TASK_CHANNELS[0]["link"]),
-            InlineKeyboardButton("Join 2 🔗", url=TASK_CHANNELS[1]["link"]),
+            InlineKeyboardButton("𝗝𝗢𝗜𝗡 𝟭", url=TASK_CHANNELS[0]["link"]),
+            InlineKeyboardButton("𝗝𝗢𝗜𝗡 𝟮", url=TASK_CHANNELS[1]["link"]),
         ],
     ])
 
@@ -166,16 +166,11 @@ def register_handlers(app: Client):
         joined, missing = await check_fsub(client, user_id)
 
         # ✏️ WELCOME TEXT — Force join se pehle
-        welcome_before = f"""<b>👋 Welcome, <a href='tg://user?id={user_id}'>{user_name}</a>!</b>
-
-╔══════════════════════════════╗
-║      <b>💳 TIVRA PAY BOT</b>        ║
-║    Fast · Safe · Reliable    ║
-╚══════════════════════════════╝
-
-➻ Yahan apna welcome text likho.
-
-⚠️ <b>Pehle niche diye channels join karo, phir ✅ Verify dabao.</b>"""
+        welcome_before = f"""<b>👋 𝗛𝗲𝗹𝗹𝗼𝘄, <a href='tg://user?id={user_id}'>{user_name}</a>!</b>
+        💐 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 𝗔𝗡𝗬𝗔 𝗕𝗢𝗧𝗦!
+        🤑 𝗝𝗼𝗶𝗻 𝟱 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗔𝗻𝗱 𝗚𝗲𝘁 ₹𝟯𝟴𝟬
+        📌 𝗠𝘂𝘀𝘁 𝗝𝗼𝗶𝗻 𝗔𝗹𝗹 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝗧𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 𝗕𝗼𝘁
+        ✔️ 𝗔𝗳𝘁𝗲𝗿 𝗝𝗼𝗶𝗻𝗶𝗻𝗴, 𝗖𝗹𝗶𝗰𝗸 𝗩𝗘𝗥𝗜𝗙𝗬 🔒"""
 
         # ✏️ WELCOME TEXT — Verify ke baad
         welcome_after = f"""<b>✅ Welcome, <a href='tg://user?id={user_id}'>{user_name}</a>!</b>
