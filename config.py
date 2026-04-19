@@ -53,8 +53,8 @@ REQUIRED_CHANNELS = [
 # ── WELCOME IMAGES ─────────────────────────────────────────
  
 # Force join se PEHLE dikhne wali image
-WELCOME_IMAGE_BEFORE = "AgACAgUAAxkBAAMCaeJgQzT8-hyPDedVeMWxiC_p02QAAmESaxvg8RBXjYEx96kJgK0BAAMCAAN5AAM7BA"  # 👈 Pehle wali image file_id
+WELCOME_IMAGE_BEFORE = "https://files.catbox.moe/3rdf9a.jpg"  # 👈 Pehle wali image file_id
  
 # Verify hone ke BAAD dikhne wali image
-WELCOME_IMAGE_AFTER  = "AgACAgUAAxkBAAMCaeJgQzT8-hyPDedVeMWxiC_p02QAAmESaxvg8RBXjYEx96kJgK0BAAMCAAN5AAM7BA"  # 👈 Doosri image ka file_id yahan daalo
+WELCOME_IMAGE_AFTER  = "https://files.catbox.moe/yp0cak.jpg"  # 👈 Doosri image ka file_id yahan daalo
  
