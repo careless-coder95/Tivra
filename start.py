@@ -120,7 +120,7 @@ def get_fsub_inline(missing_channels: list):
     for i in range(0, len(flat_buttons), 2):
         rows.append(flat_buttons[i:i+2])
 
-    rows.append([InlineKeyboardButton("✅ Verify Karo", callback_data="verify_fsub")])
+    rows.append([InlineKeyboardButton("✅ Verify", callback_data="verify_fsub")])
     return InlineKeyboardMarkup(rows)
 
 
