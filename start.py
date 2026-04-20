@@ -29,7 +29,7 @@ TASK_CHANNELS = [
 ]
 
 # Task & Earn image
-TASK_IMAGE = "https://files.catbox.moe/3rdf9a.jpg"  # 👈 Task wali image ka file_id
+TASK_IMAGE = "https://d.uguu.se/tAPsvZHq.jpg"  # 👈 Task wali image ka file_id
 
 # Refer & Earn image
 REFER_IMAGE = "https://d.uguu.se/frcApBNr.jpg"  # 👈 Refer wali image ka file_id yahan daalo
@@ -38,11 +38,11 @@ REFER_IMAGE = "https://d.uguu.se/frcApBNr.jpg"  # 👈 Refer wali image ka file_
 # 🔴 IMPORTANT VALUES 
 # ==============================================================
 
-title="𝗔𝗡𝗬𝗔 𝗕𝗢𝗧𝗦"     # bot name
-rafer="https://t.me/Dkgkmemfcbot"       #rafer link [ bot link ]
-username="CarelessxOwner"        #admin username without @
-support="CarelessxWorld"         #support group username without @
-bot_username="Dkgkmemfcbot"  #bot username without @
+title="𝗗𝗔𝗜𝗟𝗬 𝗖𝗔𝗦𝗛"     # bot name
+rafer="https://t.me/DailyxCash_bot"       #rafer link [ bot link ]
+username="dj_alok777"        #admin username without @
+support=""         #support group username without @
+bot_username="DailyxCash_bot"  #bot username without @
 rafer_app="https://h5.sw-smart2.com?invite=NMY42ZRL"    # rafer app link 
 
 
@@ -284,8 +284,7 @@ def register_handlers(app: Client):
 
         inline_buttons = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("👤 Admin", url=f"https://t.me/{username}"),
-                InlineKeyboardButton("☎️ Group", url=f"https://t.me/{support}"),
+                InlineKeyboardButton("👤 𝗔𝗗𝗠𝗜𝗡", url=f"https://t.me/{username}"),
             ],
         ])
 
