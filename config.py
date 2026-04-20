@@ -11,7 +11,7 @@ OWNER_ID = 5864182070   # 👈 Apna user ID
 # ── BROADCAST ADMINS ──────────────────────────────────────
 ADMINS = [
     5864182070,
-    # 9876543210,  # Admin 2
+    8260757052,  # Admin 2
     # 1122334455,  # Admin 3
 ]
 
@@ -34,19 +34,17 @@ REQUIRED_CHANNELS = [
         "_id":  -1009876543210,                   # 👈 Doosre channel ka numeric ID
         "link": "https://t.me/+XyZaBcDeFgHiJkLm", # 👈 Doosre channel ka invite link
     },
-    # Aur add karna ho to copy karo upar wala block:
-    # {
-    #     "_id":  -1001122334455,
-    #     "link": "https://t.me/+YourPrivateLink",
-    # },
+    {
+        "_id":  -1001234567890,                   # 👈 Pehle channel ka numeric ID
+        "link": "https://t.me/+AbCdEfGhIjKlMnOp", # 👈 Pehle channel ka invite link
+    },
+    {
+        "_id":  -1009876543210,                   # 👈 Doosre channel ka numeric ID
+        "link": "https://t.me/+XyZaBcDeFgHiJkLm", # 👈 Doosre channel ka invite link
+    },
+    
 ]
 
 # ── WELCOME IMAGES ─────────────────────────────────────────
-WELCOME_IMAGE_BEFORE = "FILE_ID_YAHAN"  # 👈 Force join se pehle wali image
+WELCOME_IMAGE_BEFORE = "https://o.uguu.se/ZnvqCTFv.jpg"  # 👈 Force join se pehle wali image
 WELCOME_IMAGE_AFTER  = "FILE_ID_YAHAN"  # 👈 Verify ke baad wali image
-
-# ── TASK & EARN IMAGE ──────────────────────────────────────
-TASK_IMAGE  = "FILE_ID_YAHAN"  # 👈 Task & Earn wali image
-
-# ── REFER & EARN IMAGE ─────────────────────────────────────
-REFER_IMAGE = "FILE_ID_YAHAN"  # 👈 Refer & Earn wali image
