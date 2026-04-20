@@ -27,24 +27,28 @@ ADMINS = [
 #
 REQUIRED_CHANNELS = [
     {
-        "_id":  -1001234567890,                   # 👈 Pehle channel ka numeric ID
-        "link": "https://t.me/+AbCdEfGhIjKlMnOp", # 👈 Pehle channel ka invite link
+        "_id":  -1003044540691,                   # 👈 Pehle channel ka numeric ID
+        "link": "https://t.me/+aCTkFFeWvnhhNjg1", # 👈 Pehle channel ka invite link
     },
     {
-        "_id":  -1009876543210,                   # 👈 Doosre channel ka numeric ID
-        "link": "https://t.me/+XyZaBcDeFgHiJkLm", # 👈 Doosre channel ka invite link
+        "_id":  -1003553730476,                   # 👈 Doosre channel ka numeric ID
+        "link": "https://t.me/+ArNqBUy9OAw2OGE1", # 👈 Doosre channel ka invite link
     },
     {
-        "_id":  -1001234567890,                   # 👈 Pehle channel ka numeric ID
-        "link": "https://t.me/+AbCdEfGhIjKlMnOp", # 👈 Pehle channel ka invite link
+        "_id":  -1003557913263,                   # 👈 Pehle channel ka numeric ID
+        "link": "https://t.me/+7bLILMq4tZg3Y2Y1", # 👈 Pehle channel ka invite link
     },
     {
-        "_id":  -1009876543210,                   # 👈 Doosre channel ka numeric ID
-        "link": "https://t.me/+XyZaBcDeFgHiJkLm", # 👈 Doosre channel ka invite link
+        "_id":  -1003689288663,                   # 👈 Doosre channel ka numeric ID
+        "link": "https://t.me/+7MkBUP4QUTg1OTc1", # 👈 Doosre channel ka invite link
+    },
+    {
+        "_id":  -1003631093100,                   # 👈 Doosre channel ka numeric ID
+        "link": "https://t.me/+JGntuGUw1PNhYTQ1", # 👈 Doosre channel ka invite link
     },
     
 ]
 
 # ── WELCOME IMAGES ─────────────────────────────────────────
 WELCOME_IMAGE_BEFORE = "https://o.uguu.se/ZnvqCTFv.jpg"  # 👈 Force join se pehle wali image
-WELCOME_IMAGE_AFTER  = "FILE_ID_YAHAN"  # 👈 Verify ke baad wali image
+WELCOME_IMAGE_AFTER  = "https://o.uguu.se/ZnvqCTFv.jpg"  # 👈 Verify ke baad wali image
