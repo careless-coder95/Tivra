@@ -24,7 +24,7 @@ TASK_CHANNELS = [
         "link": "https://t.me/+JGntuGUw1PNhYTQ1",   # 👈 Apna link daalo
     },
     {
-        "link": "https://t.me/+RpTKZ1_u3mk5NDFl",   # 👈 Apna link daalo
+        "link": "https://t.me/UPIx_Earning_Bot",   # 👈 Apna link daalo
     },
 ]
 
